@@ -1,0 +1,8 @@
+include webnest/example_project/Mydb.sqlite3
+recursive-include webnest/example_project/templates *
+recursive-include webnest/example_project/static *
+recursive-include webnest/example_project/db *
+
+```text
+include README.md
+include LICENSE
