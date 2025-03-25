@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='webnest',
-    version='0.1.0',
+    version='0.1.1',
     packages=find_packages(include=['webnest','webnest.example_project','webnest.db']),
     install_requires=['Jinja2==3.1.4','colorama==0.4.6','black==24.8.0'],
     entry_points={
