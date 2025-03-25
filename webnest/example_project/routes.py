@@ -2,7 +2,7 @@ from webnest.urls import route
 from webnest.shortcuts import render
 
 def index(request): 
-    return render('index.html',context={'Title':'webnest package'})
+    return render('index.html',context={'Title':'Welcome to Webnest'})
 
 
 urls = [

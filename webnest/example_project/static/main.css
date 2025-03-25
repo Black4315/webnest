@@ -13,12 +13,167 @@ body{
     align-items: center;
     height: 100vh;
 }
-.container{
-    width: 600px;
-    padding: 20px !important;
-    max-width:600px;
-    min-height: 300px;
-    border-radius: 10px;
+
+  /* Base Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body with deep space gradient and neon glow */
+body {
+    font-family: 'Inter', 'Arial', sans-serif;
+    background: radial-gradient(circle, #0f0f10, #07070a);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.container {
     text-align: center;
-    background: #ffffff3d;
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow:
+        0 0 40px rgba(0, 255, 255, 0.6),
+        0 0 100px rgba(0, 100, 255, 0.3),
+        inset 0 0 30px rgba(255, 255, 255, 0.05);
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+    margin: 15px;
+}
+
+.container:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+/* Title with bold neon gradients */
+h1 {
+    font-size: 3.5em;
+    background: linear-gradient(45deg, #00ffff, #00ffcc, #00c9ff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    animation: glowPulse 2s infinite alternate;
+}
+
+p {
+    font-size: 1.4em;
+    opacity: 0.8;
+    margin-bottom: 20px;
+    animation: slideInUp 1s ease;
+}
+
+/* Glowing button with deep shadow */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 40px;
+    font-size: 1em;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #00c9ff, #6a00ff);
+    box-shadow:
+        0 0 20px rgba(0, 255, 255, 0.7),
+        0 0 40px rgba(0, 0, 255, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow:
+        0 0 25px rgba(0, 255, 255, 1),
+        0 0 50px rgba(0, 0, 255, 0.9);
+}
+
+/* Floating animated neon particles */
+.particle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #00c9ff, #002aff);
+    border-radius: 50%;
+    opacity: 0.5;
+    filter: blur(40px);
+    animation: pulseFloat 10s infinite alternate ease-in-out;
+}
+
+.particle:nth-child(1) {
+    top: 10%;
+    left: 15%;
+    animation-delay: -3s;
+}
+
+.particle:nth-child(2) {
+    top: 65%;
+    right: 10%;
+    animation-delay: -5s;
+}
+
+.particle:nth-child(3) {
+    bottom: 20%;
+    left: 50%;
+    animation-delay: -7s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes glowPulse {
+    from {
+        text-shadow: 0 0 20px #00ffff;
+    }
+
+    to {
+        text-shadow: 0 0 30px #746dffb4;
+    }
+}
+
+@keyframes pulseFloat {
+    from {
+        transform: translateY(-15px) rotate(15deg);
+    }
+
+    to {
+        transform: translateY(15px) rotate(-15deg);
+    }
+}
+
+@media screen and (max-width:640px) {
+
+    body{
+        font-size: 12px;
+    }
+    
 }
