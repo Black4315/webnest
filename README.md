@@ -1,6 +1,6 @@
 # webnest
 
-WebNest is a lightweight Python framework designed for building web applications quickly. It offers easy project setup, server management, database integration, and custom HTML tags (similar to Jinja2) for dynamic content rendering. WebNest also features simple routing to streamline your development process.
+WebNest is a lightweight Python framework designed for building web applications quickly. It offers easy project setup, server management, database integration, and custom HTML tags (similar to Jinja2) for dynamic content rendering, such as {{ title }}. WebNest also features simple routing to streamline your development process.
 
 ## Installation
 
